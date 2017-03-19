@@ -91,9 +91,9 @@ public class MainActivity extends BaseActivity implements CardPickerDialog.Click
         tabs.add(barmusic);
         final CustomViewPager customViewPager = (CustomViewPager) findViewById(R.id.main_viewpager);
         final MainFragment mainFragment = new MainFragment();
-        final TabNetPagerFragment tabNetPagerFragment = new TabNetPagerFragment();
+//        final TabNetPagerFragment tabNetPagerFragment = new TabNetPagerFragment();
         CustomViewPagerAdapter customViewPagerAdapter = new CustomViewPagerAdapter(getSupportFragmentManager());
-        customViewPagerAdapter.addFragment(tabNetPagerFragment);
+//        customViewPagerAdapter.addFragment(tabNetPagerFragment);
         customViewPagerAdapter.addFragment(mainFragment);
         customViewPager.setAdapter(customViewPagerAdapter);
         customViewPager.setCurrentItem(1);

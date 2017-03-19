@@ -142,7 +142,7 @@ public class TabPagerFragment extends AttachDialogFragment {
     public void onResume() {
         super.onResume();
         if (title[0].equals("单曲"))
-            ab.setTitle("本地音乐");
+            ab.setTitle(R.string.local_music);
     }
 
 

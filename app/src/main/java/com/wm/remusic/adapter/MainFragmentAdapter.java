@@ -188,7 +188,7 @@ public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapte
 
 
                 break;
-            case 2:
+            case 3:
                 itemHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -204,7 +204,7 @@ public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapte
                     }
                 });
                 break;
-            case 3:
+            case 2:
                 itemHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

@@ -35,7 +35,7 @@ public class MenuItemAdapter extends BaseAdapter {
                     new LvMenuItem(R.mipmap.topmenu_icn_night, "夜间模式"),
                     new LvMenuItem(R.mipmap.topmenu_icn_skin, "主题换肤"),
                     new LvMenuItem(R.mipmap.topmenu_icn_time, "定时关闭音乐"),
-                    new LvMenuItem(R.mipmap.topmenu_icn_vip, "下载歌曲品质"),
+//                    new LvMenuItem(R.mipmap.topmenu_icn_vip, "下载歌曲品质"),
                     new LvMenuItem(R.mipmap.topmenu_icn_exit, "退出")
 
             ));

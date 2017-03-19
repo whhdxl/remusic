@@ -117,7 +117,7 @@ public class MainFragment extends BaseFragment {
         information.title = title;
         information.count = count;
         information.avatar = id;
-        if (mList.size() < 4) {
+        if (mList.size() < 3) {
             mList.add(new MainFragmentItem());
         }
         mList.set(i, information); //将新的info对象加入到信息列表中
@@ -139,7 +139,7 @@ public class MainFragment extends BaseFragment {
             try{
                 localMusicCount = MusicUtils.queryMusic(mContext, IConstants.START_FROM_LOCAL).size();
                 recentMusicCount = TopTracksLoader.getCount(MainApplication.context, TopTracksLoader.QueryType.RecentSongs);
-                downLoadCount = DownFileStore.getInstance(mContext).getDownLoadedListAll().size();
+//                downLoadCount = DownFileStore.getInstance(mContext).getDownLoadedListAll().size();
                 artistsCount = MusicUtils.queryArtist(mContext).size();
             }catch (Exception e){
                 e.printStackTrace();
@@ -148,8 +148,8 @@ public class MainFragment extends BaseFragment {
         }
         setInfo(mContext.getResources().getString(R.string.local_music), localMusicCount, R.drawable.music_icn_local, 0);
         setInfo(mContext.getResources().getString(R.string.recent_play), recentMusicCount, R.drawable.music_icn_recent, 1);
-        setInfo(mContext.getResources().getString(R.string.local_manage), downLoadCount, R.drawable.music_icn_dld, 2);
-        setInfo(mContext.getResources().getString(R.string.my_artist), artistsCount, R.drawable.music_icn_artist, 3);
+        setInfo(mContext.getResources().getString(R.string.my_artist), artistsCount, R.drawable.music_icn_artist, 2);
+//        setInfo(mContext.getResources().getString(R.string.local_manage), downLoadCount, R.drawable.music_icn_dld, 3);
     }
 
     //刷新列表
