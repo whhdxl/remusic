@@ -163,13 +163,13 @@ public class MainActivity extends BaseActivity implements CardPickerDialog.Click
                         drawerLayout.closeDrawers();
 
                         break;
+//                    case 5:
+//                        BitSetFragment bfragment = new BitSetFragment();
+//                        bfragment.show(getSupportFragmentManager(), "bitset");
+//                        drawerLayout.closeDrawers();
+//
+//                        break;
                     case 4:
-                        BitSetFragment bfragment = new BitSetFragment();
-                        bfragment.show(getSupportFragmentManager(), "bitset");
-                        drawerLayout.closeDrawers();
-
-                        break;
-                    case 5:
                         if (MusicPlayer.isPlaying()) {
                             MusicPlayer.playOrPause();
                         }
