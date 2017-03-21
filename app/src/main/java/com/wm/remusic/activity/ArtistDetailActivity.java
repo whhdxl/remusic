@@ -54,7 +54,7 @@ import java.util.List;
  * Created by wm on 2016/4/15.
  */
 
-//歌单
+//Playlist
 public class ArtistDetailActivity extends BaseActivity implements ObservableScrollViewCallbacks {
 
     private String TAG = ArtistDetailActivity.class.getSimpleName();

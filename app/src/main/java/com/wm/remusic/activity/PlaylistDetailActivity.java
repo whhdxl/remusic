@@ -103,14 +103,14 @@ public class PlaylistDetailActivity extends BaseActivity {
         final ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.actionbar_back);
         ab.setDisplayHomeAsUpEnabled(true);
-        ab.setTitle("歌单");
+        ab.setTitle("Playlist");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
-        //collapsingToolbarLayout.setTitle("歌单");
+        //collapsingToolbarLayout.setTitle("Playlist");
 
     }
 

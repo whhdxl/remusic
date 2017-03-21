@@ -68,7 +68,7 @@ public class DownActivity extends BaseActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
-        adapter.addFragment(DownMusicFragment.newInstance("/storage/emulated/0/remusic", false, null), "单曲");
+        adapter.addFragment(DownMusicFragment.newInstance("/storage/emulated/0/remusic", false, null), "SONGS");
         adapter.addFragment(new DownFragment(), "下载中");
         viewPager.setAdapter(adapter);
     }

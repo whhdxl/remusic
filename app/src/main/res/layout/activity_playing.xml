@@ -135,7 +135,7 @@
                 android:focusable="false"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="获取封面和歌词"
+                android:text="Get the cover and lyrics"
                 android:textAlignment="center" />
 
             <com.wm.remusic.lrc.LrcView

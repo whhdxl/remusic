@@ -108,25 +108,25 @@ public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapte
                     if (playlist.albumArt != null)
                         itemHolder.albumArt.setImageURI(Uri.parse(playlist.albumArt));
                     itemHolder.title.setText(playlist.name);
-                    itemHolder.songcount.setText(playlist.songCount + "首");
+                    itemHolder.songcount.setText(playlist.songCount + " songs");
 
                 }
                 if (collectExpanded && !playlist.author.equals("local")) {
                     if (playlist.albumArt != null)
                         itemHolder.albumArt.setImageURI(Uri.parse(playlist.albumArt));
                     itemHolder.title.setText(playlist.name);
-                    itemHolder.songcount.setText(playlist.songCount + "首");
+                    itemHolder.songcount.setText(playlist.songCount + " songs");
                 }
                 setOnPlaylistListener(itemHolder, i, playlist.id, playlist.albumArt, playlist.name);
                 isLoveList = false;
                 break;
             case 2:
-                itemHolder.sectionItem.setText("创建的歌单" + "(" + playlists.size() + ")");
+                itemHolder.sectionItem.setText("All Playlists" + "(" + playlists.size() + ")");
                 itemHolder.sectionImg.setImageResource(R.drawable.list_icn_arr_right);
                 setSectionListener(itemHolder, i);
                 break;
             case 3:
-                itemHolder.sectionItem.setText("收藏的歌单" + "(" + netplaylists.size() + ")");
+                itemHolder.sectionItem.setText("Favorite Playlists" + "(" + netplaylists.size() + ")");
                 itemHolder.sectionImg.setImageResource(R.drawable.list_icn_arr_right);
                 setSectionListener(itemHolder, i);
                 break;
@@ -304,7 +304,7 @@ public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapte
             return 1;
         }
         if (itemResults.get(position) instanceof String) {
-            if (((String) itemResults.get(position)).equals("收藏的歌单"))
+            if (((String) itemResults.get(position)).equals("Favorite Playlists"))
                 return 3;
         }
         return 2;
@@ -353,9 +353,9 @@ public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapte
                         createdExpanded = false;
                     } else {
                         itemResults.removeAll(netplaylists);
-                        itemResults.remove("收藏的歌单");
+                        itemResults.remove("Favorite Playlists");
                         itemResults.addAll(playlists);
-                        itemResults.add("收藏的歌单");
+                        itemResults.add("Favorite Playlists");
                         itemResults.addAll(netplaylists);
                         updateResults(itemResults, playlists, netplaylists);
                         notifyItemRangeInserted(5, playlists.size());

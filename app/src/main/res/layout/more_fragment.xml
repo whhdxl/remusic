@@ -21,7 +21,7 @@
             android:paddingBottom="10dp"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
-            android:text="歌曲："
+            android:text="Music："
             android:textSize="13.5sp" />
 
         <android.support.v7.widget.RecyclerView

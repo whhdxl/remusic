@@ -44,7 +44,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:src="@drawable/btmlay_icn_dlt"
-            android:text="删除"
+            android:text="Delete"
             android:textAlignment="center" />
     </LinearLayout>
 </RelativeLayout>

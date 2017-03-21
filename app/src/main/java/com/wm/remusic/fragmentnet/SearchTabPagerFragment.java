@@ -102,9 +102,9 @@ public class SearchTabPagerFragment extends AttachFragment {
                 viewPager = (ViewPager) contentView.findViewById(R.id.viewpager);
                 if (viewPager != null) {
                     Adapter adapter = new Adapter(getChildFragmentManager());
-                    adapter.addFragment(SearchMusicFragment.newInstance(songResults), "单曲");
-                    adapter.addFragment(SearchArtistFragment.newInstance(artistResults), "歌手");
-                    adapter.addFragment(SearchAlbumFragment.newInstance(albumResults), "专辑");
+                    adapter.addFragment(SearchMusicFragment.newInstance(songResults), "SONGS");
+                    adapter.addFragment(SearchArtistFragment.newInstance(artistResults), "ARTISTS");
+                    adapter.addFragment(SearchAlbumFragment.newInstance(albumResults), "ALBUMS");
                     viewPager.setAdapter(adapter);
                     viewPager.setOffscreenPageLimit(3);
                 }

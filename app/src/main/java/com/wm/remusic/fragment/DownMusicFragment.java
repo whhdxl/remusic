@@ -151,7 +151,7 @@ public class DownMusicFragment extends BaseFragment {
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
             if (holder instanceof CommonItemViewHolder) {
-                ((CommonItemViewHolder) holder).textView.setText("共" + mList.size() + "首");
+                ((CommonItemViewHolder) holder).textView.setText("" + mList.size() + " songs");
 
                 ((CommonItemViewHolder) holder).select.setOnClickListener(new View.OnClickListener() {
                     @Override

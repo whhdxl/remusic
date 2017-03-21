@@ -106,7 +106,7 @@ public class SimpleMoreFragment extends AttachDialogFragment {
         if (musicName == null) {
             musicName = MusicPlayer.getTrackName();
         }
-        topTitle.setText("歌曲：" + " " + musicName);
+        topTitle.setText("Music：" + " " + musicName);
         setMusicInfo();
         musicflowAdapter = new MusicFlowAdapter(mContext, mlistInfo, adapterMusicInfo);
 
@@ -238,12 +238,12 @@ public class SimpleMoreFragment extends AttachDialogFragment {
     //设置音乐overflow条目
     private void setMusicInfo() {
         //设置mlistInfo，listview要显示的内容
-        setInfo("下一首播放", R.drawable.lay_icn_next);
-        setInfo("收藏到歌单", R.drawable.lay_icn_fav);
-        setInfo("分享", R.drawable.lay_icn_share);
-        setInfo("删除", R.drawable.lay_icn_delete);
-        setInfo("设为铃声", R.drawable.lay_icn_ring);
-        setInfo("查看歌曲信息", R.drawable.lay_icn_document);
+        setInfo("Play next", R.drawable.lay_icn_next);
+        setInfo("Add to playlist", R.drawable.lay_icn_fav);
+        setInfo("Share", R.drawable.lay_icn_share);
+        setInfo("Delete", R.drawable.lay_icn_delete);
+        setInfo("Set as ringtone", R.drawable.lay_icn_ring);
+        setInfo("Track info", R.drawable.lay_icn_document);
     }
 
 

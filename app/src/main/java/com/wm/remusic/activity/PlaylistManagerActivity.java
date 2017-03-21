@@ -57,7 +57,7 @@ public class PlaylistManagerActivity extends AppCompatActivity implements View.O
         ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.actionbar_back);
         ab.setDisplayHomeAsUpEnabled(true);
-        ab.setTitle("已选择0项");
+        ab.setTitle("0 Selected");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,7 +96,7 @@ public class PlaylistManagerActivity extends AppCompatActivity implements View.O
                                     PlaylistsManager.getInstance(PlaylistManagerActivity.this).delete(selectList.get(i).id);
                                 }
                                 new reload().execute();
-                                ab.setTitle("已选择0项");
+                                ab.setTitle("0 Selected");
                                 dialog.dismiss();
                             }
                         }).
@@ -284,7 +284,7 @@ public class PlaylistManagerActivity extends AppCompatActivity implements View.O
                         setItemChecked(i, true);
                     }
 
-                    ab.setTitle("已选择" + getSelectedItem().size() + "项");
+                    ab.setTitle("" + getSelectedItem().size() + "Select");
                 }
             });
             ((ListItemViewHolder) holder).itemView.setOnClickListener(new View.OnClickListener() {
@@ -296,7 +296,7 @@ public class PlaylistManagerActivity extends AppCompatActivity implements View.O
                         setItemChecked(i, true);
                     }
                     notifyItemChanged(i);
-                    ab.setTitle("已选择" + getSelectedItem().size() + "项");
+                    ab.setTitle("" + getSelectedItem().size() + "Select");
                 }
             });
 

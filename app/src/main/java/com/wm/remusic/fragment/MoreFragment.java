@@ -168,7 +168,7 @@ public class MoreFragment extends AttachDialogFragment {
             albumId = adapterMusicInfo.albumId + "";
             albumName = adapterMusicInfo.albumName;
             musicName = adapterMusicInfo.musicName;
-            topTitle.setText("歌曲：" + " " + musicName);
+            topTitle.setText("Music：" + " " + musicName);
             heightPercent = 0.6;
             setMusicInfo();
             muaicflowAdapter = new MusicFlowAdapter(mContext, mlistInfo, adapterMusicInfo);
@@ -178,17 +178,17 @@ public class MoreFragment extends AttachDialogFragment {
                 case IConstants.ARTISTOVERFLOW:
                     String artist = args;
                     list = MusicUtils.queryMusic(mContext, artist, IConstants.START_FROM_ARTIST);
-                    topTitle.setText("歌曲：" + " " + list.get(0).artist);
+                    topTitle.setText("Music：" + " " + list.get(0).artist);
                     break;
                 case IConstants.ALBUMOVERFLOW:
                     String albumId = args;
                     list = MusicUtils.queryMusic(mContext, albumId, IConstants.START_FROM_ALBUM);
-                    topTitle.setText("专辑：" + " " + list.get(0).albumName);
+                    topTitle.setText("ALBUMS：" + " " + list.get(0).albumName);
                     break;
                 case IConstants.FOLDEROVERFLOW:
                     String folder = args;
                     list = MusicUtils.queryMusic(mContext, folder, IConstants.START_FROM_FOLDER);
-                    topTitle.setText("文件夹：" + " " + folder);
+                    topTitle.setText("FOLDERS：" + " " + folder);
                     break;
             }
             setCommonInfo();
@@ -511,21 +511,21 @@ public class MoreFragment extends AttachDialogFragment {
     //设置音乐overflow条目
     private void setMusicInfo() {
         //设置mlistInfo，listview要显示的内容
-        setInfo("下一首播放", R.drawable.lay_icn_next);
-        setInfo("收藏到歌单", R.drawable.lay_icn_fav);
+        setInfo("Play next", R.drawable.lay_icn_next);
+        setInfo("Add to playlist", R.drawable.lay_icn_fav);
         setInfo("分享", R.drawable.lay_icn_share);
-        setInfo("删除", R.drawable.lay_icn_delete);
-        setInfo("歌手：" + artist, R.drawable.lay_icn_artist);
-        setInfo("专辑：" + albumName, R.drawable.lay_icn_alb);
-        setInfo("设为铃声", R.drawable.lay_icn_ring);
-        setInfo("查看歌曲信息", R.drawable.lay_icn_document);
+        setInfo("Delete", R.drawable.lay_icn_delete);
+        setInfo("ARTISTS：" + artist, R.drawable.lay_icn_artist);
+        setInfo("ALBUMS：" + albumName, R.drawable.lay_icn_alb);
+        setInfo("Set as ringtone", R.drawable.lay_icn_ring);
+        setInfo("Track info", R.drawable.lay_icn_document);
     }
 
     //设置专辑，艺术家，文件夹overflow条目
     private void setCommonInfo() {
-        setInfo("播放", R.drawable.lay_icn_play);
-        setInfo("收藏到歌单", R.drawable.lay_icn_fav);
-        setInfo("删除", R.drawable.lay_icn_delete);
+        setInfo("Play", R.drawable.lay_icn_play);
+        setInfo("Add to playlist", R.drawable.lay_icn_fav);
+        setInfo("Delete", R.drawable.lay_icn_delete);
     }
 
     @Override

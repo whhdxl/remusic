@@ -41,7 +41,7 @@ public class LrcView extends View implements ILrcView {
     /**
      * 无歌词数据的时候 显示的默认文字
      **/
-    private static final String DEFAULT_TEXT = "暂时没有歌词";
+    private static final String DEFAULT_TEXT = "No Lyrics Available";
     /**
      * 默认文字的字体大小
      **/

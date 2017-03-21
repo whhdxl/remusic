@@ -60,7 +60,7 @@ import java.util.HashMap;
  * Created by wm on 2016/4/15.
  */
 
-//歌单
+//Playlist
 public class RankPlaylistActivity extends BaseActivity implements ObservableScrollViewCallbacks {
 
     private int albumPath;
@@ -140,7 +140,7 @@ public class RankPlaylistActivity extends BaseActivity implements ObservableScro
         actionBar = getSupportActionBar();
         actionBar.setHomeAsUpIndicator(R.drawable.actionbar_back);
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("歌单");
+        actionBar.setTitle("Playlist");
         toolbar.setPadding(0, mStatusSize, 0, 0);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -399,7 +399,7 @@ public class RankPlaylistActivity extends BaseActivity implements ObservableScro
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.toolbar_background));
         }
         if (scrollY == 0) {
-            toolbar.setTitle("歌单");
+            toolbar.setTitle("Playlist");
             actionBar.setBackgroundDrawable(null);
         }
         if (scrollY > mFlexibleSpaceImageHeight - mActionBarSize - mStatusSize) {
@@ -521,7 +521,7 @@ public class RankPlaylistActivity extends BaseActivity implements ObservableScro
 
             } else if (itemHolder instanceof CommonItemViewHolder) {
 
-                ((CommonItemViewHolder) itemHolder).textView.setText("(共" + arraylist.size() + "首)");
+                ((CommonItemViewHolder) itemHolder).textView.setText("(" + arraylist.size() + " songs)");
 
                 ((CommonItemViewHolder) itemHolder).select.setOnClickListener(new View.OnClickListener() {
                     @Override

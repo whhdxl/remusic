@@ -238,7 +238,7 @@ public class FolderFragment extends BaseFragment {
         public void onBindViewHolder(ListItemViewHolder holder, int i) {
             FolderInfo model = mList.get(i);
             holder.Maintitle.setText(model.folder_name);
-            holder.title.setText(model.folder_count + "首 " + model.folder_path);
+            holder.title.setText(model.folder_count + " songs " + model.folder_path);
             holder.imageView.setImageResource(R.drawable.list_icn_folder);
             //根据播放中歌曲的专辑名判断当前专辑条目是否有播放的歌曲
             String folder_path = null;

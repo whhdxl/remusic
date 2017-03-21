@@ -228,7 +228,7 @@ public class ArtistFragment extends BaseFragment {
             ArtistInfo model = mList.get(i);
             //设置条目状态
             ((ListItemViewHolder) holder).mainTitle.setText(model.artist_name);
-            ((ListItemViewHolder) holder).title.setText(model.number_of_tracks + "首");
+            ((ListItemViewHolder) holder).title.setText(model.number_of_tracks + " songs");
 
             //根据播放中歌曲的歌手名判断当前歌手专辑条目是否有播放的歌曲
             if (MusicPlayer.getCurrentArtistId() == (model.artist_id)) {

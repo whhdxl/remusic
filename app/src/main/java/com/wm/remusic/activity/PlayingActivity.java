@@ -222,7 +222,7 @@ public class PlayingActivity extends BaseActivity implements IConstants {
                 Intent intent = new Intent();
                 intent.setAction(MediaService.TRY_GET_TRACKINFO);
                 sendBroadcast(intent);
-                Toast.makeText(getApplicationContext(), "正在获取信息", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Getting info…", Toast.LENGTH_SHORT).show();
             }
         });
 

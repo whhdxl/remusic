@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="歌曲："
+            android:text="Music："
             android:textColor="@color/small_font"
             android:textSize="15sp" />
 
@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="文件名称："
+            android:text="Filename："
             android:textColor="@color/text_color"
             android:textSize="15sp" />
 
@@ -59,7 +59,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="播放时长："
+            android:text="Duration："
             android:textColor="@color/text_color"
             android:textSize="15sp" />
 
@@ -99,7 +99,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="文件大小："
+            android:text="Size："
             android:textColor="@color/text_color"
             android:textSize="15sp" />
 
@@ -121,7 +121,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="文件路径："
+            android:text="Path："
             android:textColor="@color/text_color"
             android:textSize="15sp" />
 

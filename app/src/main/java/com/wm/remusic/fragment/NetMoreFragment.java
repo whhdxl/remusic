@@ -143,7 +143,7 @@ public class NetMoreFragment extends AttachDialogFragment {
         albumId = adapterMusicInfo.albumId + "";
         albumName = adapterMusicInfo.albumName;
         musicName = adapterMusicInfo.musicName;
-        topTitle.setText("歌曲：" + " " + musicName);
+        topTitle.setText("Music：" + " " + musicName);
         heightPercent = 0.6;
         setMusicInfo();
         muaicflowAdapter = new MusicFlowAdapter(mContext, mlistInfo, adapterMusicInfo);
@@ -334,13 +334,13 @@ public class NetMoreFragment extends AttachDialogFragment {
     //设置音乐overflow条目
     private void setMusicInfo() {
         //设置mlistInfo，listview要显示的内容
-        setInfo("下一首播放", R.drawable.lay_icn_next);
-        setInfo("收藏到歌单", R.drawable.lay_icn_fav);
+        setInfo("Play next", R.drawable.lay_icn_next);
+        setInfo("Add to playlist", R.drawable.lay_icn_fav);
         setInfo("分享", R.drawable.lay_icn_share);
         setInfo("下载", R.drawable.lay_icn_dld);
-        setInfo("歌手：" + artist, R.drawable.lay_icn_artist);
-        setInfo("专辑：" + albumName, R.drawable.lay_icn_alb);
-        setInfo("查看歌曲信息", R.drawable.lay_icn_document);
+        setInfo("ARTISTS：" + artist, R.drawable.lay_icn_artist);
+        setInfo("ALBUMS：" + albumName, R.drawable.lay_icn_alb);
+        setInfo("Track info", R.drawable.lay_icn_document);
     }
 
 

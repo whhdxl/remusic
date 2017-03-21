@@ -182,7 +182,7 @@ public class PlayQueueFragment extends AttachDialogFragment {
                 recyclerView.setAdapter(adapter);
                 itemDecoration = new DividerItemDecoration(mContext, DividerItemDecoration.VERTICAL_LIST);
                 recyclerView.addItemDecoration(itemDecoration);
-                playlistNumber.setText("播放列表（" + playlist.size() + "）");
+                playlistNumber.setText("Playlist（" + playlist.size() + "）");
 
                 for (int i = 0; i < playlist.size(); i++) {
                     MusicInfo info = playlist.get(i);
@@ -271,9 +271,9 @@ public class PlayQueueFragment extends AttachDialogFragment {
                         }
                         notifyDataSetChanged();
                         if (playlist != null) {
-                            playlistNumber.setText("播放列表（" + playlist.size() + "）");
+                            playlistNumber.setText("Playlist（" + playlist.size() + "）");
                         } else {
-                            playlistNumber.setText("播放列表");
+                            playlistNumber.setText("Playlist");
                         }
 
                     }

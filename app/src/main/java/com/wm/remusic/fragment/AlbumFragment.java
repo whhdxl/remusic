@@ -241,7 +241,7 @@ public class AlbumFragment extends BaseFragment {
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
             AlbumInfo model = mList.get(position);
             ((ListItemViewHolder) holder).title.setText(model.album_name.toString());
-            ((ListItemViewHolder) holder).title2.setText(model.number_of_songs + "首" + model.album_artist);
+            ((ListItemViewHolder) holder).title2.setText(model.number_of_songs + " songs" + model.album_artist);
             ((ListItemViewHolder) holder).draweeView.setImageURI(Uri.parse(model.album_art + ""));//要加“” 弹出println needs a message
             //根据播放中歌曲的专辑名判断当前专辑条目是否有播放的歌曲
             if (MusicPlayer.getArtistName() != null && MusicPlayer.getAlbumName().equals(model.album_name)) {

@@ -390,7 +390,7 @@ public class BMA {
     }
 
     /**
-     * 歌单
+     * Playlist
      *
      * @author Sanron
      */
@@ -421,7 +421,7 @@ public class BMA {
         }
 
         /**
-         * 歌单
+         * Playlist
          *
          * @param pageNo   页码
          * @param pageSize 每页数量

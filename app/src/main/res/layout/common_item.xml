@@ -24,7 +24,7 @@
         android:layout_height="match_parent"
         android:layout_toRightOf="@+id/play_all"
         android:gravity="center_vertical"
-        android:text="播放全部"
+        android:text="Play All"
         android:textColor="@color/text_color"
         android:textSize="15sp" />
 
@@ -40,13 +40,15 @@
         android:id="@+id/select"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_centerInParent="true"
         android:layout_gravity="center|clip_vertical"
         android:background="?android:attr/selectableItemBackground"
         android:focusable="false"
         android:gravity="end"
         android:paddingLeft="15dp"
         android:paddingRight="12dp"
-        android:src="@drawable/list_icn_mng" />
+        android:src="@drawable/list_icn_mng"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"/>
 </RelativeLayout>

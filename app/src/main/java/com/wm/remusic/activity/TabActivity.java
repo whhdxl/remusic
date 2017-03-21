@@ -37,7 +37,7 @@ public class TabActivity extends BaseActivity {
 
         }
 
-        String[] title = {"单曲", "歌手", "专辑", "文件夹"};
+        String[] title = {"SONGS", "ARTISTS", "ALBUMS", "FOLDERS"};
         TabPagerFragment fragment = TabPagerFragment.newInstance(page, title);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(R.id.tab_container, fragment);

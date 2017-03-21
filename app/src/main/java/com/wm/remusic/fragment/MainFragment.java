@@ -165,7 +165,7 @@ public class MainFragment extends BaseFragment {
                 results.add(mContext.getResources().getString(R.string.created_playlists));
                 results.addAll(playlists);
                 if (netPlaylists != null) {
-                    results.add("收藏的歌单");
+                    results.add("Favorite Playlists");
                     results.addAll(netPlaylists);
                 }
 

@@ -62,7 +62,7 @@ public class SelectActivity extends AppCompatActivity implements View.OnClickLis
         ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.actionbar_back);
         ab.setDisplayHomeAsUpEnabled(true);
-        ab.setTitle("已选择0项");
+        ab.setTitle("0 Selected");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -268,7 +268,7 @@ public class SelectActivity extends AppCompatActivity implements View.OnClickLis
 
         //更新adpter的数据
         public void updateDataSet() {
-            ab.setTitle("已选择0项");
+            ab.setTitle("0 Selected");
             mList.removeAll(getSelectedItem());
             mSelectedPositions.clear();
         }
@@ -311,7 +311,7 @@ public class SelectActivity extends AppCompatActivity implements View.OnClickLis
                     } else {
                         setItemChecked(i, true);
                     }
-                    ab.setTitle("已选择" + getSelectedItem().size() + "项");
+                    ab.setTitle("" + getSelectedItem().size() + "Select");
                 }
             });
             ((ListItemViewHolder) holder).itemView.setOnClickListener(new View.OnClickListener() {
@@ -323,7 +323,7 @@ public class SelectActivity extends AppCompatActivity implements View.OnClickLis
                         setItemChecked(i, true);
                     }
                     notifyItemChanged(i);
-                    ab.setTitle("已选择" + getSelectedItem().size() + "项");
+                    ab.setTitle("" + getSelectedItem().size() + "Select");
                 }
             });
 

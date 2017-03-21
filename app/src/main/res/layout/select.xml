@@ -54,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="下一首播放"
+                    android:text="Play next"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -78,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="加入歌单"
+                    android:text="Add to playlist"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -103,7 +103,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:src="@drawable/btmlay_icn_dlt"
-                    android:text="删除"
+                    android:text="Delete"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>

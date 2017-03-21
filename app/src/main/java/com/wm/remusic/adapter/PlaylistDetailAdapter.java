@@ -72,7 +72,7 @@ public class PlaylistDetailAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
         } else if (itemHolder instanceof CommonItemViewHolder) {
 
-            ((CommonItemViewHolder) itemHolder).textView.setText("(共" + arraylist.size() + "首)");
+            ((CommonItemViewHolder) itemHolder).textView.setText("(" + arraylist.size() + " songs)");
 
             ((CommonItemViewHolder) itemHolder).select.setOnClickListener(new View.OnClickListener() {
                 @Override

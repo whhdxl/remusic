@@ -151,14 +151,14 @@ public class PlaylistDetailFragment extends Fragment {
         final ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.actionbar_back);
         ab.setDisplayHomeAsUpEnabled(true);
-        ab.setTitle("歌单");
+        ab.setTitle("Playlist");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().onBackPressed();
             }
         });
-        //collapsingToolbarLayout.setTitle("歌单");
+        //collapsingToolbarLayout.setTitle("Playlist");
 
     }
 
