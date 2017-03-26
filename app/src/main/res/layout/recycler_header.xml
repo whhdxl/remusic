@@ -193,7 +193,7 @@
                     android:textColor="@color/white_text"
                     android:textSize="12sp"
                     android:gravity="center"
-                    android:text="分享"
+                    android:text="Share"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>

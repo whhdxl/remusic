@@ -336,7 +336,7 @@ public class NetMoreFragment extends AttachDialogFragment {
         //设置mlistInfo，listview要显示的内容
         setInfo("Play next", R.drawable.lay_icn_next);
         setInfo("Add to playlist", R.drawable.lay_icn_fav);
-        setInfo("分享", R.drawable.lay_icn_share);
+        setInfo("Share", R.drawable.lay_icn_share);
         setInfo("下载", R.drawable.lay_icn_dld);
         setInfo("ARTISTS：" + artist, R.drawable.lay_icn_artist);
         setInfo("ALBUMS：" + albumName, R.drawable.lay_icn_alb);
