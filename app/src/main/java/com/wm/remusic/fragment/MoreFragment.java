@@ -280,51 +280,51 @@ public class MoreFragment extends AttachDialogFragment {
                             break;
                         case 4:
 
-                            if (adapterMusicInfo.islocal) {
-                                new AsyncTask<Void, Void, Void>() {
-
-                                    @Override
-                                    protected Void doInBackground(Void... params) {
-                                        ArrayList<SearchArtistInfo> artistResults = new ArrayList<>();
-                                        try {
-
-                                            JsonObject jsonObject = HttpUtil.getResposeJsonObject(BMA.Search.searchMerge(adapterMusicInfo.artist, 1, 50)).get("result").getAsJsonObject();
-                                            JsonObject artistObject = jsonObject.get("artist_info").getAsJsonObject();
-                                            JsonArray artistArray = artistObject.get("artist_list").getAsJsonArray();
-                                            for (JsonElement o : artistArray) {
-                                                SearchArtistInfo artistInfo = MainApplication.gsonInstance().fromJson(o, SearchArtistInfo.class);
-                                                artistResults.add(artistInfo);
-                                            }
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
-                                        }
-
-
-                                        if (artistResults.size() == 0) {
-                                            mHandler.post(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    Toast.makeText(mContext, "没有找到该艺术家", Toast.LENGTH_SHORT).show();
-                                                }
-                                            });
-
-                                        } else {
-                                            SearchArtistInfo info = artistResults.get(0);
-                                            Intent intent = new Intent(mContext, ArtistDetailActivity.class);
-                                            intent.putExtra("artistid", info.getArtist_id());
-                                            intent.putExtra("artistname", info.getAuthor());
-                                            mContext.startActivity(intent);
-                                        }
-                                        return null;
-                                    }
-                                }.execute();
-                            } else {
-
-                                Intent intent = new Intent(mContext, ArtistDetailActivity.class);
-                                intent.putExtra("artistid", adapterMusicInfo.artistId + "");
-                                intent.putExtra("artistname", adapterMusicInfo.artist);
-                                mContext.startActivity(intent);
-                            }
+//                            if (adapterMusicInfo.islocal) {
+//                                new AsyncTask<Void, Void, Void>() {
+//
+//                                    @Override
+//                                    protected Void doInBackground(Void... params) {
+//                                        ArrayList<SearchArtistInfo> artistResults = new ArrayList<>();
+//                                        try {
+//
+//                                            JsonObject jsonObject = HttpUtil.getResposeJsonObject(BMA.Search.searchMerge(adapterMusicInfo.artist, 1, 50)).get("result").getAsJsonObject();
+//                                            JsonObject artistObject = jsonObject.get("artist_info").getAsJsonObject();
+//                                            JsonArray artistArray = artistObject.get("artist_list").getAsJsonArray();
+//                                            for (JsonElement o : artistArray) {
+//                                                SearchArtistInfo artistInfo = MainApplication.gsonInstance().fromJson(o, SearchArtistInfo.class);
+//                                                artistResults.add(artistInfo);
+//                                            }
+//                                        } catch (Exception e) {
+//                                            e.printStackTrace();
+//                                        }
+//
+//
+//                                        if (artistResults.size() == 0) {
+//                                            mHandler.post(new Runnable() {
+//                                                @Override
+//                                                public void run() {
+//                                                    Toast.makeText(mContext, "没有找到该艺术家", Toast.LENGTH_SHORT).show();
+//                                                }
+//                                            });
+//
+//                                        } else {
+//                                            SearchArtistInfo info = artistResults.get(0);
+//                                            Intent intent = new Intent(mContext, ArtistDetailActivity.class);
+//                                            intent.putExtra("artistid", info.getArtist_id());
+//                                            intent.putExtra("artistname", info.getAuthor());
+//                                            mContext.startActivity(intent);
+//                                        }
+//                                        return null;
+//                                    }
+//                                }.execute();
+//                            } else {
+//
+//                                Intent intent = new Intent(mContext, ArtistDetailActivity.class);
+//                                intent.putExtra("artistid", adapterMusicInfo.artistId + "");
+//                                intent.putExtra("artistname", adapterMusicInfo.artist);
+//                                mContext.startActivity(intent);
+//                            }
                             dismiss();
                             break;
                         case 5:
