@@ -47,32 +47,32 @@ public class TimingFragment extends AttachDialogFragment implements View.OnClick
         switch (v.getId()) {
             case R.id.timing_10min:
                 MusicPlayer.timing(10 * 60 * 1000);
-                Toast.makeText(mContext, "将在10分钟后停止播放", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Stop playing after 10 minutes", Toast.LENGTH_SHORT).show();
                 dismiss();
                 break;
             case R.id.timing_20min:
                 MusicPlayer.timing(20 * 60 * 1000);
-                Toast.makeText(mContext, "将在20分钟后停止播放", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Stop playing after 20 minutes", Toast.LENGTH_SHORT).show();
                 dismiss();
                 break;
             case R.id.timing_30min:
                 MusicPlayer.timing(30 * 60 * 1000);
-                Toast.makeText(mContext, "将在30分钟后停止播放", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Stop playing after 30 minutes", Toast.LENGTH_SHORT).show();
                 dismiss();
                 break;
             case R.id.timing_45min:
                 MusicPlayer.timing(45 * 60 * 1000);
-                Toast.makeText(mContext, "将在45分钟后停止播放", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Stop playing after 45 minutes", Toast.LENGTH_SHORT).show();
                 dismiss();
                 break;
             case R.id.timing_60min:
                 MusicPlayer.timing(60 * 60 * 1000);
-                Toast.makeText(mContext, "将在60分钟后停止播放", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Stop playing after 60 minutes", Toast.LENGTH_SHORT).show();
                 dismiss();
                 break;
             case R.id.timing_90min:
                 MusicPlayer.timing(90 * 60 * 1000);
-                Toast.makeText(mContext, "将在90分钟后停止播放", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Stop playing after 90 minutes", Toast.LENGTH_SHORT).show();
                 dismiss();
                 break;
         }

@@ -226,7 +226,7 @@ public class PlaylistActivity extends BaseActivity implements ObservableScrollVi
             @Override
             public void onClick(View v) {
                 if (!mCollected) {
-                    collectText.setText("已收藏");
+                    collectText.setText("Added to Favorite");
                     new AsyncTask<Void,Void,Void>(){
                         @Override
                         protected Void doInBackground(Void... params) {
@@ -444,7 +444,7 @@ public class PlaylistActivity extends BaseActivity implements ObservableScrollVi
             headerDetail.setVisibility(View.VISIBLE);
             if (mCollected) {
                 L.D(d, TAG, "collected");
-                collectText.setText("已收藏");
+                collectText.setText("Added to Favorite");
             }
         }
     };

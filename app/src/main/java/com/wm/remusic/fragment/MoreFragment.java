@@ -278,8 +278,8 @@ public class MoreFragment extends AttachDialogFragment {
                                     }).show();
                             dismiss();
                             break;
-                        case 4:
-
+//                        case 4:
+//
 //                            if (adapterMusicInfo.islocal) {
 //                                new AsyncTask<Void, Void, Void>() {
 //
@@ -325,60 +325,60 @@ public class MoreFragment extends AttachDialogFragment {
 //                                intent.putExtra("artistname", adapterMusicInfo.artist);
 //                                mContext.startActivity(intent);
 //                            }
-                            dismiss();
-                            break;
-                        case 5:
-
-                            if (adapterMusicInfo.islocal) {
-                                new AsyncTask<Void, Void, Void>() {
-
-                                    @Override
-                                    protected Void doInBackground(Void... params) {
-                                        ArrayList<SearchAlbumInfo> albumResults = new ArrayList<SearchAlbumInfo>();
-                                        try {
-
-                                            JsonObject jsonObject = HttpUtil.getResposeJsonObject(BMA.Search.searchMerge(adapterMusicInfo.albumName, 1, 10)).get("result").getAsJsonObject();
-                                            JsonObject albumObject = jsonObject.get("album_info").getAsJsonObject();
-                                            JsonArray albumArray = albumObject.get("album_list").getAsJsonArray();
-                                            for (JsonElement o : albumArray) {
-                                                SearchAlbumInfo albumInfo = MainApplication.gsonInstance().fromJson(o, SearchAlbumInfo.class);
-                                                albumResults.add(albumInfo);
-                                            }
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
-                                        }
-
-                                        if (albumResults.size() == 0) {
-                                            mHandler.post(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    Toast.makeText(mContext, "没有找到所属专辑", Toast.LENGTH_SHORT).show();
-                                                }
-                                            });
-
-                                        } else {
-                                            SearchAlbumInfo info = albumResults.get(0);
-                                            Intent intent = new Intent(mContext, AlbumsDetailActivity.class);
-                                            intent.putExtra("albumid", info.getAlbum_id());
-                                            intent.putExtra("albumart", info.getPic_small());
-                                            intent.putExtra("albumname", info.getTitle());
-                                            intent.putExtra("albumdetail", info.getAlbum_desc());
-                                            mContext.startActivity(intent);
-                                        }
-                                        return null;
-                                    }
-                                };
-                            } else {
-
-                                Intent intent = new Intent(mContext, AlbumsDetailActivity.class);
-                                intent.putExtra("albumid", adapterMusicInfo.albumId + "");
-                                intent.putExtra("albumart", adapterMusicInfo.albumData);
-                                intent.putExtra("albumname", adapterMusicInfo.albumName);
-                                mContext.startActivity(intent);
-                            }
-                            dismiss();
-                            break;
-                        case 6:
+//                            dismiss();
+//                            break;
+//                        case 5:
+//
+//                            if (adapterMusicInfo.islocal) {
+//                                new AsyncTask<Void, Void, Void>() {
+//
+//                                    @Override
+//                                    protected Void doInBackground(Void... params) {
+//                                        ArrayList<SearchAlbumInfo> albumResults = new ArrayList<SearchAlbumInfo>();
+//                                        try {
+//
+//                                            JsonObject jsonObject = HttpUtil.getResposeJsonObject(BMA.Search.searchMerge(adapterMusicInfo.albumName, 1, 10)).get("result").getAsJsonObject();
+//                                            JsonObject albumObject = jsonObject.get("album_info").getAsJsonObject();
+//                                            JsonArray albumArray = albumObject.get("album_list").getAsJsonArray();
+//                                            for (JsonElement o : albumArray) {
+//                                                SearchAlbumInfo albumInfo = MainApplication.gsonInstance().fromJson(o, SearchAlbumInfo.class);
+//                                                albumResults.add(albumInfo);
+//                                            }
+//                                        } catch (Exception e) {
+//                                            e.printStackTrace();
+//                                        }
+//
+//                                        if (albumResults.size() == 0) {
+//                                            mHandler.post(new Runnable() {
+//                                                @Override
+//                                                public void run() {
+//                                                    Toast.makeText(mContext, "没有找到所属专辑", Toast.LENGTH_SHORT).show();
+//                                                }
+//                                            });
+//
+//                                        } else {
+//                                            SearchAlbumInfo info = albumResults.get(0);
+//                                            Intent intent = new Intent(mContext, AlbumsDetailActivity.class);
+//                                            intent.putExtra("albumid", info.getAlbum_id());
+//                                            intent.putExtra("albumart", info.getPic_small());
+//                                            intent.putExtra("albumname", info.getTitle());
+//                                            intent.putExtra("albumdetail", info.getAlbum_desc());
+//                                            mContext.startActivity(intent);
+//                                        }
+//                                        return null;
+//                                    }
+//                                };
+//                            } else {
+//
+//                                Intent intent = new Intent(mContext, AlbumsDetailActivity.class);
+//                                intent.putExtra("albumid", adapterMusicInfo.albumId + "");
+//                                intent.putExtra("albumart", adapterMusicInfo.albumData);
+//                                intent.putExtra("albumname", adapterMusicInfo.albumName);
+//                                mContext.startActivity(intent);
+//                            }
+//                            dismiss();
+//                            break;
+                        case 4:
                             if(adapterMusicInfo.islocal){
                                 new AlertDialog.Builder(mContext).setTitle(getResources().getString(R.string.sure_to_set_ringtone)).
                                         setPositiveButton(getResources().getString(R.string.sure), new DialogInterface.OnClickListener() {
@@ -403,7 +403,7 @@ public class MoreFragment extends AttachDialogFragment {
                             }
 
                             break;
-                        case 7:
+                        case 5:
                             MusicDetailFragment detailFrament = MusicDetailFragment.newInstance(adapterMusicInfo);
                             detailFrament.show(getActivity().getSupportFragmentManager(), "detail");
                             dismiss();
@@ -515,8 +515,8 @@ public class MoreFragment extends AttachDialogFragment {
         setInfo("Add to playlist", R.drawable.lay_icn_fav);
         setInfo("Share", R.drawable.lay_icn_share);
         setInfo("Delete", R.drawable.lay_icn_delete);
-        setInfo("ARTISTS：" + artist, R.drawable.lay_icn_artist);
-        setInfo("ALBUMS：" + albumName, R.drawable.lay_icn_alb);
+//        setInfo("ARTISTS：" + artist, R.drawable.lay_icn_artist);
+//        setInfo("ALBUMS：" + albumName, R.drawable.lay_icn_alb);
         setInfo("Set as ringtone", R.drawable.lay_icn_ring);
         setInfo("Track info", R.drawable.lay_icn_document);
     }

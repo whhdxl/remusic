@@ -36,7 +36,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="10dp"
             android:layout_weight="5"
-            android:hint="请输入歌单标题"
+            android:hint="Add Title"
             android:imeOptions="actionDone"
             android:singleLine="true"
             android:textSize="12sp" />

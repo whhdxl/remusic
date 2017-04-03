@@ -6,7 +6,7 @@
     <string name="local_manage">Download manage</string>
     <string name="my_artist">Artists</string>
     <string name="created_playlists">All Playlists</string>
-    <string name="my_fav_playlist">My Favorite Playlists </string>
+    <string name="my_fav_playlist">My Favorite </string>
     <string name="shared_to">Share to</string>
 
     <string name="queue_is_empty">The play queue is empty</string>
