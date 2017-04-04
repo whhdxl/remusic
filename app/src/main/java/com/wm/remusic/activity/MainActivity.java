@@ -148,6 +148,7 @@ public class MainActivity extends BaseActivity implements CardPickerDialog.Click
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 1:
+                        MainActivity.this.onConfirm(ThemeHelper.CARD_NIGHT);
                         drawerLayout.closeDrawers();
                         break;
                     case 2:

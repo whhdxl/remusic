@@ -352,5 +352,9 @@
     <color name="red_dark">#C62828</color>
     <color name="red_trans">#99F44336</color>
 
+    <color name="night">#37474F</color>
+    <color name="night_dark">#263238</color>
+    <color name="nightTextColor">#fff</color>
+
 
 </resources>
