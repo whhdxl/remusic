@@ -15,10 +15,74 @@ android {
         renderscriptSupportModeEnabled true
         //end
     }
+    signingConfigs {
+        releaseConfig {
+            storeFile file("../bbz.jks")
+            storePassword KEYSTORE_PASSWORD
+            keyAlias 'bzz'
+            keyPassword KEY_PASSWORD
+        }
+        debugConfig {
+            storeFile file("../bbz.jks")
+            storePassword KEYSTORE_PASSWORD
+            keyAlias 'bzz'
+            keyPassword KEY_PASSWORD
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            shrinkResources true
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+
+        debug {
+            minifyEnabled false
+            zipAlignEnabled true
+            debuggable true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+            signingConfig signingConfigs.debugConfig
+        }
+    }
+    //这个是解决lint报错的代码
+    lintOptions {
+        abortOnError false
+        disable 'InvalidPackage'
+        checkReleaseBuilds false
+    }
+
+    //重复dex问题，可以加这个
+    dexOptions {
+        //DexIndexOverflowException: Cannot merge new index 65572 into a non-jumbo instruction!w
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+    // 打包配置
+    packagingOptions {// 排除一些文件
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    //渠道
+    productFlavors {
+        //test
+        _test {
+            manifestPlaceholders = [CHANNEL_VALUE: "test"]
+        }
+        //googleplay
+        googleplay {
+            manifestPlaceholders = [CHANNEL_VALUE: "googleplay"]
         }
     }
 }

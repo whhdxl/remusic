@@ -15,3 +15,37 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-dontskipnonpubliclibraryclasses
+-dontskipnonpubliclibraryclassmembers
+
+-keepattributes Signature
+-keepattributes *Annotation*
+-keepattributes Exceptions,InnerClasses
+
+-keep class com.google.android.gms.internal.** { *; }
+-keep class com.facebook.** { *; }
+-dontwarn com.facebook.ads.**
+
+-keep public class com.av.remusic.R$*{
+    public static final int *;
+}
+-keep class com.av.remusic.json.** { *; }
+
+-keep class retrofit.** { *; }
+-keepclasseswithmembers class * {
+    @retrofit.http.* <methods>;
+}
+-keepattributes Signature
+-keep class com.google.gson.** { *; }
+
+-keep class com.sun.mail.** { *; }
+
+#-dontwarn com.sun.mail.**
+#-dontwarn org.apache.**
+#-dontwarn com.facebook.**
+#-dontwarn com.google.**
+#-dontwarn retrofit.**
+#-dontwarn okio.**
+#-dontwarn com.squareup.okhttp.internal.**
+#-dontwarn javax.activation.**
