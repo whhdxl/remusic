@@ -29,7 +29,7 @@ import android.widget.CompoundButton;
 import com.bilibili.magicasakura.utils.DrawableUtils;
 import com.bilibili.magicasakura.utils.TintInfo;
 import com.bilibili.magicasakura.utils.TintManager;
-import com.wm.remusic.R;
+import com.av.remusic.R;
 
 /**
  * @author xyczero617@gmail.com

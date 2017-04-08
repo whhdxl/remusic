@@ -53,7 +53,7 @@ import android.widget.ListAdapter;
 import android.widget.WrapperListAdapter;
 
 import com.bilibili.magicasakura.widgets.Tintable;
-import com.wm.remusic.R;
+import com.av.remusic.R;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

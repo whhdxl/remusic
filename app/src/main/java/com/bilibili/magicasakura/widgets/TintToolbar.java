@@ -23,7 +23,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 
 import com.bilibili.magicasakura.utils.TintManager;
-import com.wm.remusic.R;
+import com.av.remusic.R;
 
 /**
  * @author xyczero617@gmail.com

@@ -33,7 +33,7 @@ import android.util.StateSet;
 import android.util.TypedValue;
 import android.util.Xml;
 
-import com.wm.remusic.R;
+import com.av.remusic.R;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

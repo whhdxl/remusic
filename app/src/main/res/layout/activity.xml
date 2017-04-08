@@ -59,7 +59,7 @@
         </RelativeLayout>
     </com.bilibili.magicasakura.widgets.TintToolbar>
 
-    <com.wm.remusic.widget.CustomViewPager
+    <com.av.remusic.widget.CustomViewPager
         android:layout_below="@+id/toolbar"
         android:layout_above="@+id/nav_play"
         android:id="@+id/main_viewpager"

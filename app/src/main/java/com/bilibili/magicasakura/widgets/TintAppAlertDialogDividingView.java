@@ -22,7 +22,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.bilibili.magicasakura.utils.ThemeUtils;
-import com.wm.remusic.R;
+import com.av.remusic.R;
 
 /**
  * @author xyczero617@gmail.com

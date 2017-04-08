@@ -27,7 +27,7 @@ import android.util.AttributeSet;
 import android.widget.CheckedTextView;
 
 import com.bilibili.magicasakura.utils.TintManager;
-import com.wm.remusic.R;
+import com.av.remusic.R;
 
 /**
  * @author xyczero617@gmail.com

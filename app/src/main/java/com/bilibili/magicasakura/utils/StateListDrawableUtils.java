@@ -24,7 +24,7 @@ import android.util.AttributeSet;
 import android.util.SparseArray;
 
 import com.bilibili.magicasakura.drawables.FilterableStateListDrawable;
-import com.wm.remusic.R;
+import com.av.remusic.R;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

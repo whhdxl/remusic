@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wm.remusic">
+    package="com.av.remusic">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
@@ -16,14 +16,14 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
-        android:name=".MainApplication"
+        android:name="com.av.remusic.MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/appicon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.av.remusic.activity.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->
@@ -32,13 +32,13 @@
             <!--</intent-filter>-->
         </activity>
         <activity
-            android:name=".activity.LoadingActivity"
+            android:name="com.av.remusic.activity.LoadingActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.NetSearchWordsActivity"
+            android:name="com.av.remusic.activity.NetSearchWordsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.PlayingActivity"
+            android:name="com.av.remusic.activity.PlayingActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -46,30 +46,30 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.LocalSearchActivity"
+            android:name="com.av.remusic.activity.LocalSearchActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SelectActivity"
+            android:name="com.av.remusic.activity.SelectActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.PlaylistSelectActivity"
+            android:name="com.av.remusic.activity.PlaylistSelectActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.PlaylistManagerActivity"
+            android:name="com.av.remusic.activity.PlaylistManagerActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.AlbumsDetailActivity"
+            android:name="com.av.remusic.activity.AlbumsDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.TabActivity"
+            android:name="com.av.remusic.activity.TabActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.DownActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".activity.PlaylistActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".activity.RecentActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".activity.NetItemChangeActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".activity.ArtistDetailActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".activity.RadioDetailActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".activity.LockActivity"
+        <activity android:name="com.av.remusic.activity.DownActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.av.remusic.activity.PlaylistActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.av.remusic.activity.RecentActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.av.remusic.activity.NetItemChangeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.av.remusic.activity.ArtistDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.av.remusic.activity.RadioDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.av.remusic.activity.LockActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:launchMode="singleInstance"
@@ -77,10 +77,10 @@
             android:noHistory="true"
             android:taskAffinity="com.package.name.lockscreen"
             android:theme="@style/LockScreenTheme"/>
-        <activity android:name=".activity.RankPlaylistActivity"/>
+        <activity android:name="com.av.remusic.activity.RankPlaylistActivity"/>
         <activity android:name=".request.UiMonitorActivity"/>
 
-        <service android:name=".downmusic.DownService">
+        <service android:name="com.av.remusic.downmusic.DownService">
             <intent-filter>
                 <action android:name="com.wm.remusic.downtaskadd"/>
                 <action android:name="com.wm.remusic.resumestarttask"/>
@@ -94,23 +94,23 @@
 
         </service>
         <service
-            android:name=".service.MediaService"
+            android:name="com.av.remusic.service.MediaService"
             android:process=":main" />
 
-        <receiver android:name=".receiver.MediaButtonIntentReceiver">
+        <receiver android:name="com.av.remusic.receiver.MediaButtonIntentReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
                 <action android:name="android.media.AUDIO_BECOMING_NOISY" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.LaunchNowPlayingReceiver">
+        <receiver android:name="com.av.remusic.receiver.LaunchNowPlayingReceiver">
             <intent-filter>
                 <action android:name="com.wm.remusic.LAUNCH_NOW_PLAYING_ACTION" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".widget.SimpleWidgetProvider" >
+        <receiver android:name="com.av.remusic.widget.SimpleWidgetProvider" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="com.wm.remusic.metachanged"/>
@@ -137,7 +137,7 @@
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>
-        <activity android:name=".activity.SplashActivity" android:label="@string/app_name" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout">
+        <activity android:name="com.av.remusic.activity.SplashActivity" android:label="@string/app_name" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout">
 
 
         -<intent-filter>
@@ -155,7 +155,7 @@
         <!-- 请务必修改 android:authorities 为贵应用的标识，一般为 包名.fileProvider -->
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.wm.remusic.fileProvider"
+            android:authorities="com.av.remusic.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true" >
 
