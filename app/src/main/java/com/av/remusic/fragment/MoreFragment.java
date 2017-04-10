@@ -429,40 +429,58 @@ public class MoreFragment extends AttachDialogFragment {
                         }, 60);
                         dismiss();
                         break;
+//                    case 1:
+//                        AddNetPlaylistDialog.newInstance(list).show(getFragmentManager(), "add");
+//
+//                        dismiss();
+//                        break;
                     case 1:
-                        AddNetPlaylistDialog.newInstance(list).show(getFragmentManager(), "add");
+                        new AlertDialog.Builder(mContext).setTitle(getResources().getString(R.string.sure_to_delete_musics)).
+                                setPositiveButton(getResources().getString(R.string.sure), new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
 
-                        dismiss();
-                        break;
-                    case 2:
+                                        try {
+                                            new AsyncTask<Void, Void, Void>() {
 
-                        new AsyncTask<Void, Void, Void>() {
+                                                @Override
+                                                protected Void doInBackground(Void... params) {
+                                                    for (MusicInfo music : list) {
 
-                            @Override
-                            protected Void doInBackground(Void... params) {
-                                for (MusicInfo music : list) {
+                                                        if (MusicPlayer.getCurrentAudioId() == music.songId) {
+                                                            if (MusicPlayer.getQueueSize() == 0) {
+                                                                MusicPlayer.stop();
+                                                            } else {
+                                                                MusicPlayer.next();
+                                                            }
 
-                                    if (MusicPlayer.getCurrentAudioId() == music.songId) {
-                                        if (MusicPlayer.getQueueSize() == 0) {
-                                            MusicPlayer.stop();
-                                        } else {
-                                            MusicPlayer.next();
+                                                        }
+                                                        Uri uri = ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, music.songId);
+                                                        mContext.getContentResolver().delete(uri, null, null);
+                                                        PlaylistsManager.getInstance(mContext).deleteMusic(mContext, music.songId);
+                                                    }
+                                                    return null;
+                                                }
+
+                                                @Override
+                                                protected void onPostExecute(Void v) {
+                                                    mContext.sendBroadcast(new Intent(IConstants.MUSIC_COUNT_CHANGED));
+                                                }
+
+                                            }.execute();
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
                                         }
 
+                                        dismiss();
                                     }
-                                    Uri uri = ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, music.songId);
-                                    mContext.getContentResolver().delete(uri, null, null);
-                                    PlaylistsManager.getInstance(mContext).deleteMusic(mContext, music.songId);
-                                }
-                                return null;
-                            }
-
-                            @Override
-                            protected void onPostExecute(Void v) {
-                                mContext.sendBroadcast(new Intent(IConstants.MUSIC_COUNT_CHANGED));
-                            }
-
-                        }.execute();
+                                }).
+                                setNegativeButton(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dismiss();
+                                    }
+                                }).show();
 
 //                        Handler handler1 = new Handler();
 //                        handler1.postDelayed(new Runnable() {
@@ -514,7 +532,7 @@ public class MoreFragment extends AttachDialogFragment {
     //设置专辑，艺术家，文件夹overflow条目
     private void setCommonInfo() {
         setInfo("Play", R.drawable.lay_icn_play);
-        setInfo("Add to playlist", R.drawable.lay_icn_fav);
+//        setInfo("Add to playlist", R.drawable.lay_icn_fav);
         setInfo("Delete", R.drawable.lay_icn_delete);
     }
 
