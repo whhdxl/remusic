@@ -212,13 +212,13 @@ public class MoreFragment extends AttachDialogFragment {
 
                             dismiss();
                             break;
+//                        case 1:
+//                            ArrayList<MusicInfo> musicList = new ArrayList<MusicInfo>();
+//                            musicList.add(adapterMusicInfo);
+//                            AddNetPlaylistDialog.newInstance(musicList).show(getFragmentManager(), "add");
+//                            dismiss();
+//                            break;
                         case 1:
-                            ArrayList<MusicInfo> musicList = new ArrayList<MusicInfo>();
-                            musicList.add(adapterMusicInfo);
-                            AddNetPlaylistDialog.newInstance(musicList).show(getFragmentManager(), "add");
-                            dismiss();
-                            break;
-                        case 2:
                             Intent shareIntent = new Intent();
                             shareIntent.setAction(Intent.ACTION_SEND);
                             shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + adapterMusicInfo.data));
@@ -226,7 +226,7 @@ public class MoreFragment extends AttachDialogFragment {
                             mContext.startActivity(Intent.createChooser(shareIntent, getResources().getString(R.string.shared_to)));
                             dismiss();
                             break;
-                        case 3:
+                        case 2:
                             new AlertDialog.Builder(mContext).setTitle(getResources().getString(R.string.sure_to_delete_music)).
                                     setPositiveButton(getResources().getString(R.string.sure), new DialogInterface.OnClickListener() {
                                         @Override
@@ -368,7 +368,7 @@ public class MoreFragment extends AttachDialogFragment {
 //                            }
 //                            dismiss();
 //                            break;
-                        case 4:
+                        case 3:
                             if(adapterMusicInfo.islocal){
                                 new AlertDialog.Builder(mContext).setTitle(getResources().getString(R.string.sure_to_set_ringtone)).
                                         setPositiveButton(getResources().getString(R.string.sure), new DialogInterface.OnClickListener() {
@@ -393,7 +393,7 @@ public class MoreFragment extends AttachDialogFragment {
                             }
 
                             break;
-                        case 5:
+                        case 4:
                             MusicDetailFragment detailFrament = MusicDetailFragment.newInstance(adapterMusicInfo);
                             detailFrament.show(getActivity().getSupportFragmentManager(), "detail");
                             dismiss();
@@ -502,7 +502,7 @@ public class MoreFragment extends AttachDialogFragment {
     private void setMusicInfo() {
         //设置mlistInfo，listview要显示的内容
         setInfo("Play next", R.drawable.lay_icn_next);
-        setInfo("Add to playlist", R.drawable.lay_icn_fav);
+//        setInfo("Add to playlist", R.drawable.lay_icn_fav);
         setInfo("Share", R.drawable.lay_icn_share);
         setInfo("Delete", R.drawable.lay_icn_delete);
 //        setInfo("ARTISTS：" + artist, R.drawable.lay_icn_artist);

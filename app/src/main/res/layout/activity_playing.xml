@@ -163,6 +163,7 @@
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="70dp"
                 android:layout_marginTop="-10dp"
+                android:visibility="gone"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -171,6 +172,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
+                    android:visibility="gone"
                     android:src="@drawable/play_rdi_icn_love" />
 
                 <ImageView
@@ -197,6 +199,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
+                    android:visibility="gone"
                     android:src="@drawable/play_icn_more" />
             </LinearLayout>
 

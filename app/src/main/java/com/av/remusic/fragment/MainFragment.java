@@ -156,12 +156,12 @@ public class MainFragment extends BaseFragment {
                 ArrayList<Playlist> playlists = playlistInfo.getPlaylist();
                 ArrayList<Playlist> netPlaylists = playlistInfo.getNetPlaylist();
                 results.addAll(mList);
-                results.add(mContext.getResources().getString(R.string.created_playlists));
-                results.addAll(playlists);
-                if (netPlaylists != null) {
-                    results.add("Favorite Playlists");
-                    results.addAll(netPlaylists);
-                }
+//                results.add(mContext.getResources().getString(R.string.created_playlists));
+//                results.addAll(playlists);
+//                if (netPlaylists != null) {
+//                    results.add("Favorite Playlists");
+//                    results.addAll(netPlaylists);
+//                }
 
                 if(mAdapter == null){
                     mAdapter = new MainFragmentAdapter(mContext);
