@@ -42,7 +42,7 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="com.wm.remusic.LAUNCH_NOW_PLAYING_ACTION" />
+                <action android:name="com.av.remusic.LAUNCH_NOW_PLAYING_ACTION" />
             </intent-filter>
         </activity>
         <activity
@@ -82,14 +82,14 @@
 
         <service android:name="com.av.remusic.downmusic.DownService">
             <intent-filter>
-                <action android:name="com.wm.remusic.downtaskadd"/>
-                <action android:name="com.wm.remusic.resumestarttask"/>
-                <action android:name="com.wm.remusic.startalltask"/>
-                <action android:name="com.wm.remusic.multidowntaskadd"/>
-                <action android:name="com.wm.remusic.pausetask"/>
-                <action android:name="com.wm.remusic.pausealltask"/>
-                <action android:name="com.wm.remusic.cacletask"/>
-                <action android:name="com.wm.remusic.caclealltask"/>
+                <action android:name="com.av.remusic.downtaskadd"/>
+                <action android:name="com.av.remusic.resumestarttask"/>
+                <action android:name="com.av.remusic.startalltask"/>
+                <action android:name="com.av.remusic.multidowntaskadd"/>
+                <action android:name="com.av.remusic.pausetask"/>
+                <action android:name="com.av.remusic.pausealltask"/>
+                <action android:name="com.av.remusic.cacletask"/>
+                <action android:name="com.av.remusic.caclealltask"/>
             </intent-filter>
 
         </service>
@@ -106,16 +106,16 @@
 
         <receiver android:name="com.av.remusic.receiver.LaunchNowPlayingReceiver">
             <intent-filter>
-                <action android:name="com.wm.remusic.LAUNCH_NOW_PLAYING_ACTION" />
+                <action android:name="com.av.remusic.LAUNCH_NOW_PLAYING_ACTION" />
             </intent-filter>
         </receiver>
 
         <receiver android:name="com.av.remusic.widget.SimpleWidgetProvider" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.wm.remusic.metachanged"/>
-                <action android:name="com.wm.remusi.change_music"/>
-                <action android:name="com.wm.remusic.progress"/>
+                <action android:name="com.av.remusic.metachanged"/>
+                <action android:name="com.av.remusi.change_music"/>
+                <action android:name="com.av.remusic.progress"/>
             </intent-filter>
             <meta-data android:name="android.appwidget.provider"
                 android:resource="@xml/appwidget_info" />

@@ -116,31 +116,31 @@ import java.util.TreeSet;
 
 @SuppressLint("NewApi")
 public class MediaService extends Service {
-    public static final String PLAYSTATE_CHANGED = "com.wm.remusic.playstatechanged";
-    public static final String POSITION_CHANGED = "com.wm.remusic.positionchanged";
-    public static final String META_CHANGED = "com.wm.remusic.metachanged";
-    public static final String PLAYLIST_ITEM_MOVED = "com.wm.remusic.mmoved";
-    public static final String QUEUE_CHANGED = "com.wm.remusic.queuechanged";
-    public static final String PLAYLIST_CHANGED = "com.wm.remusic.playlistchanged";
-    public static final String REPEATMODE_CHANGED = "com.wm.remusic.repeatmodechanged";
-    public static final String SHUFFLEMODE_CHANGED = "com.wm.remusic.shufflemodechanged";
-    public static final String TRACK_ERROR = "com.wm.remusic.trackerror";
-    public static final String TIMBER_PACKAGE_NAME = "com.wm.remusic";
+    public static final String PLAYSTATE_CHANGED = "com.av.remusic.playstatechanged";
+    public static final String POSITION_CHANGED = "com.av.remusic.positionchanged";
+    public static final String META_CHANGED = "com.av.remusic.metachanged";
+    public static final String PLAYLIST_ITEM_MOVED = "com.av.remusic.mmoved";
+    public static final String QUEUE_CHANGED = "com.av.remusic.queuechanged";
+    public static final String PLAYLIST_CHANGED = "com.av.remusic.playlistchanged";
+    public static final String REPEATMODE_CHANGED = "com.av.remusic.repeatmodechanged";
+    public static final String SHUFFLEMODE_CHANGED = "com.av.remusic.shufflemodechanged";
+    public static final String TRACK_ERROR = "com.av.remusic.trackerror";
+    public static final String TIMBER_PACKAGE_NAME = "com.av.remusic";
     public static final String MUSIC_PACKAGE_NAME = "com.android.music";
-    public static final String SERVICECMD = "com.wm.remusic.musicservicecommand";
-    public static final String TOGGLEPAUSE_ACTION = "com.wm.remusic.togglepause";
-    public static final String PAUSE_ACTION = "com.wm.remusic.pause";
-    public static final String STOP_ACTION = "com.wm.remusic.stop";
-    public static final String PREVIOUS_ACTION = "com.wm.remusic.previous";
-    public static final String PREVIOUS_FORCE_ACTION = "com.wm.remusic.previous.force";
-    public static final String NEXT_ACTION = "com.wm.remusic.next";
-    public static final String MUSIC_CHANGED = "com.wm.remusi.change_music";
-    public static final String REPEAT_ACTION = "com.wm.remusic.repeat";
-    public static final String SHUFFLE_ACTION = "com.wm.remusic.shuffle";
+    public static final String SERVICECMD = "com.av.remusic.musicservicecommand";
+    public static final String TOGGLEPAUSE_ACTION = "com.av.remusic.togglepause";
+    public static final String PAUSE_ACTION = "com.av.remusic.pause";
+    public static final String STOP_ACTION = "com.av.remusic.stop";
+    public static final String PREVIOUS_ACTION = "com.av.remusic.previous";
+    public static final String PREVIOUS_FORCE_ACTION = "com.av.remusic.previous.force";
+    public static final String NEXT_ACTION = "com.av.remusic.next";
+    public static final String MUSIC_CHANGED = "com.av.remusi.change_music";
+    public static final String REPEAT_ACTION = "com.av.remusic.repeat";
+    public static final String SHUFFLE_ACTION = "com.av.remusic.shuffle";
     public static final String FROM_MEDIA_BUTTON = "frommediabutton";
-    public static final String REFRESH = "com.wm.remusic.refresh";
-    public static final String LRC_UPDATED = "com.wm.remusic.updatelrc";
-    public static final String UPDATE_LOCKSCREEN = "com.wm.remusic.updatelockscreen";
+    public static final String REFRESH = "com.av.remusic.refresh";
+    public static final String LRC_UPDATED = "com.av.remusic.updatelrc";
+    public static final String UPDATE_LOCKSCREEN = "com.av.remusic.updatelockscreen";
     public static final String CMDNAME = "command";
     public static final String CMDTOGGLEPAUSE = "togglepause";
     public static final String CMDSTOP = "stop";
@@ -149,14 +149,14 @@ public class MediaService extends Service {
     public static final String CMDPREVIOUS = "previous";
     public static final String CMDNEXT = "next";
     public static final String CMDNOTIF = "buttonId";
-    public static final String TRACK_PREPARED = "com.wm.remusic.prepared";
-    public static final String TRY_GET_TRACKINFO = "com.wm.remusic.gettrackinfo";
-    public static final String BUFFER_UP = "com.wm.remusic.bufferup";
-    public static final String LOCK_SCREEN = "com.wm.remusic.lock";
-    public static final String SEND_PROGRESS = "com.wm.remusic.progress";
-    public static final String MUSIC_LODING = "com.wm.remusic.loading";
-    private static final String SHUTDOWN = "com.wm.remusic.shutdown";
-    public static final String SETQUEUE = "com.wm.remusic.setqueue";
+    public static final String TRACK_PREPARED = "com.av.remusic.prepared";
+    public static final String TRY_GET_TRACKINFO = "com.av.remusic.gettrackinfo";
+    public static final String BUFFER_UP = "com.av.remusic.bufferup";
+    public static final String LOCK_SCREEN = "com.av.remusic.lock";
+    public static final String SEND_PROGRESS = "com.av.remusic.progress";
+    public static final String MUSIC_LODING = "com.av.remusic.loading";
+    private static final String SHUTDOWN = "com.av.remusic.shutdown";
+    public static final String SETQUEUE = "com.av.remusic.setqueue";
     public static final int NEXT = 2;
     public static final int LAST = 3;
     public static final int SHUFFLE_NONE = 0;
@@ -1347,7 +1347,7 @@ public class MediaService extends Service {
             mSongPlayCount.bumpSongCount(getAudioId());
 
         } else if (what.equals(QUEUE_CHANGED)) {
-            Intent intent1 = new Intent("com.wm.remusic.emptyplaylist");
+            Intent intent1 = new Intent("com.av.remusic.emptyplaylist");
             intent.putExtra("showorhide", "show");
             sendBroadcast(intent1);
             saveQueue(true);
@@ -1453,8 +1453,8 @@ public class MediaService extends Service {
 //        PendingIntent pendingIntent = PendingIntent.getActivity(this.getApplicationContext(), 0,
 //                new Intent(this.getApplicationContext(), PlayingActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
         final Intent nowPlayingIntent = new Intent();
-        //nowPlayingIntent.setAction("com.wm.remusic.LAUNCH_NOW_PLAYING_ACTION");
-        nowPlayingIntent.setComponent(new ComponentName("com.wm.remusic","com.wm.remusic.activity.PlayingActivity"));
+        //nowPlayingIntent.setAction("com.av.remusic.LAUNCH_NOW_PLAYING_ACTION");
+        nowPlayingIntent.setComponent(new ComponentName("com.av.remusic","com.av.remusic.activity.PlayingActivity"));
         nowPlayingIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         PendingIntent clickIntent = PendingIntent.getBroadcast(this, 0, nowPlayingIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         PendingIntent click = PendingIntent.getActivity(this,0,nowPlayingIntent,PendingIntent.FLAG_UPDATE_CURRENT);

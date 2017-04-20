@@ -22,12 +22,12 @@ package com.av.remusic.uitl;
  */
 public interface IConstants {
 
-    String MUSIC_COUNT_CHANGED = "com.wm.remusic.musiccountchanged";
-    String PLAYLIST_ITEM_MOVED = "com.wm.remusic.mmoved";
-    String PLAYLIST_COUNT_CHANGED = "com.wm.remusic.playlistcountchanged";
-    String CHANGE_THEME = "com.wm.remusic.themechange";
-    String EMPTY_LIST = "com.wm.remusic.emptyplaylist";
-    String PACKAGE = "com.wm.remusic";
+    String MUSIC_COUNT_CHANGED = "com.av.remusic.musiccountchanged";
+    String PLAYLIST_ITEM_MOVED = "com.av.remusic.mmoved";
+    String PLAYLIST_COUNT_CHANGED = "com.av.remusic.playlistcountchanged";
+    String CHANGE_THEME = "com.av.remusic.themechange";
+    String EMPTY_LIST = "com.av.remusic.emptyplaylist";
+    String PACKAGE = "com.av.remusic";
     int MUSICOVERFLOW = 0;
     int ARTISTOVERFLOW = 1;
     int ALBUMOVERFLOW = 2;

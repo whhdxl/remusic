@@ -34,18 +34,18 @@ import java.util.concurrent.Executors;
  * Created by wm on 2016/12/13.
  */
 public class DownService extends Service {
-    public static final String ADD_DOWNTASK = "com.wm.remusic.downtaskadd";
-    public static final String ADD_MULTI_DOWNTASK = "com.wm.remusic.multidowntaskadd";
-    public static final String CANCLE_DOWNTASK = "com.wm.remusic.cacletask";
-    public static final String CANCLE_ALL_DOWNTASK = "com.wm.remusic.caclealltask";
-    public static final String START_ALL_DOWNTASK = "com.wm.remusic.startalltask";
-    public static final String RESUME_START_DOWNTASK = "com.wm.remusic.resumestarttask";
-    public static final String PAUSE_TASK = "com.wm.remusic.pausetask";
-    public static final String PAUSE_ALLTASK = "com.wm.remusic.pausealltask";
+    public static final String ADD_DOWNTASK = "com.av.remusic.downtaskadd";
+    public static final String ADD_MULTI_DOWNTASK = "com.av.remusic.multidowntaskadd";
+    public static final String CANCLE_DOWNTASK = "com.av.remusic.cacletask";
+    public static final String CANCLE_ALL_DOWNTASK = "com.av.remusic.caclealltask";
+    public static final String START_ALL_DOWNTASK = "com.av.remusic.startalltask";
+    public static final String RESUME_START_DOWNTASK = "com.av.remusic.resumestarttask";
+    public static final String PAUSE_TASK = "com.av.remusic.pausetask";
+    public static final String PAUSE_ALLTASK = "com.av.remusic.pausealltask";
 
-    public static final String UPDATE_DOWNSTAUS = "com.wm.remusic.updatedown";
-    public static final String TASK_STARTDOWN = "com.wm.remusic.taskstart";
-    public static final String TASKS_CHANGED = "com.wm.remusic.taskchanges";
+    public static final String UPDATE_DOWNSTAUS = "com.av.remusic.updatedown";
+    public static final String TASK_STARTDOWN = "com.av.remusic.taskstart";
+    public static final String TASKS_CHANGED = "com.av.remusic.taskchanges";
 
     private boolean d = true;
     private static final String TAG = "DownService";
@@ -435,7 +435,7 @@ public class DownService extends Service {
 
         final Intent nowPlayingIntent = new Intent();
         nowPlayingIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        nowPlayingIntent.setComponent(new ComponentName("com.wm.remusic", "com.wm.remusic.activity.DownActivity"));
+        nowPlayingIntent.setComponent(new ComponentName("com.av.remusic", "com.av.remusic.activity.DownActivity"));
         PendingIntent clickIntent = PendingIntent.getActivity(this,0,nowPlayingIntent,PendingIntent.FLAG_UPDATE_CURRENT);
         remoteViews.setImageViewResource(R.id.image, R.drawable.placeholder_disk_210);
         if(complete){
