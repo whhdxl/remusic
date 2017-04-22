@@ -109,8 +109,8 @@ public class SplashActivity extends Activity {
 		splashViewSettings.setSplashViewContainer(splashLayout);
 
 		// 展示开屏广告
-		SpotManager.getInstance(mContext)
-				.showSplash(mContext, splashViewSettings, mStopListener);
+//		SpotManager.getInstance(mContext)
+//				.showSplash(mContext, splashViewSettings, mStopListener);
 	}
 
 	static SpotListener mStopListener = new SpotListener() {
