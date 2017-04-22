@@ -3,6 +3,7 @@
     android:id="@+id/layout"
     android:orientation="horizontal"
     android:layout_width="match_parent"
+    android:background="@color/notification_bar_background"
     android:layout_height="match_parent">
 
     <ImageView
