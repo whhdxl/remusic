@@ -136,6 +136,7 @@
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="Get the cover and lyrics"
+                android:visibility="gone"
                 android:textAlignment="center" />
 
             <com.av.remusic.lrc.LrcView

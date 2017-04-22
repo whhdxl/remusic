@@ -182,7 +182,7 @@ public class PlayingActivity extends BaseActivity implements IConstants {
         mProgress.setMax(1000);
         loadOther();
         setViewPager();
-        initLrcView();
+//        initLrcView();
         mHandler = HandlerUtil.getInstance(this);
 
         mHandler.postDelayed(mUpAlbumRunnable, 0);
@@ -214,15 +214,15 @@ public class PlayingActivity extends BaseActivity implements IConstants {
             }
         });
 
-        mTryGetLrc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(MediaService.TRY_GET_TRACKINFO);
-                sendBroadcast(intent);
-                Toast.makeText(getApplicationContext(), "Getting info…", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        mTryGetLrc.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setAction(MediaService.TRY_GET_TRACKINFO);
+//                sendBroadcast(intent);
+//                Toast.makeText(getApplicationContext(), "Getting info…", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         final AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         int v = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
@@ -609,7 +609,7 @@ public class PlayingActivity extends BaseActivity implements IConstants {
             }
         }
         updateFav(isFav);
-        updateLrc();
+//        updateLrc();
 
 
         ab.setTitle(MusicPlayer.getTrackName());

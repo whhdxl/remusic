@@ -79,7 +79,7 @@ public class UnceHandler implements Thread.UncaughtExceptionHandler {
             @Override
             public void run() {
                 Looper.prepare();
-                Toast.makeText(application.getApplicationContext(), "很抱歉,程序出现异常,即将退出.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(application.getApplicationContext(), "Sorry, exception to exit.", Toast.LENGTH_SHORT).show();
                 Looper.loop();
             }
         }.start();
