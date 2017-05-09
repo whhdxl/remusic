@@ -8,7 +8,7 @@ android {
         applicationId "com.av.remusic"
         minSdkVersion 11
         targetSdkVersion 23
-        versionCode 1
+        versionCode 100
         versionName "1.01"
         //start
         renderscriptTargetApi 17
@@ -35,7 +35,7 @@ android {
             minifyEnabled false
             zipAlignEnabled true
             shrinkResources true
-            debuggable true
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard-rules.pro'
             signingConfig signingConfigs.releaseConfig
